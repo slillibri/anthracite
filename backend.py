@@ -114,7 +114,7 @@ class Backend():
             import config
             config = Config(config)
         self.config = config
-        self.es = rawes.Elastic(config.es_url, except_on_error=True)
+        self.es = rawes.Elastic(config.es_url)
         # make sure the index exists
         try:
             # to explain the custom mapping:
