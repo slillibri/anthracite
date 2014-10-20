@@ -1,0 +1,5 @@
+beaker==1.6.4
+requests==2.4.3
+rawes==0.5.5
+bottle==0.12.7
+python-dateutil==2.2

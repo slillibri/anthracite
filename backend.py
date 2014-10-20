@@ -102,9 +102,6 @@ class Reportpoint():
 class Backend():
 
     def __init__(self, config=None):
-        sys.path.append("%s/%s" % (os.getcwd(), 'python-dateutil'))
-        sys.path.append("%s/%s" % (os.getcwd(), 'requests'))
-        sys.path.append("%s/%s" % (os.getcwd(), 'rawes'))
         import rawes
         import requests
         from rawes.elastic_exception import ElasticException
@@ -114,7 +111,7 @@ class Backend():
             import config
             config = Config(config)
         self.config = config
-        self.es = rawes.Elastic(config.es_url, except_on_error=True)
+        self.es = rawes.Elastic(config.es_url)
         # make sure the index exists
         try:
             # to explain the custom mapping:
