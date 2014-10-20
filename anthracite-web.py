@@ -9,7 +9,6 @@ import types
 from view import page
 from collections import deque
 import __builtin__
-sys.path.append('%s/beaker' % os.path.dirname(os.path.realpath(__file__)))
 from beaker.middleware import SessionMiddleware
 
 session = None

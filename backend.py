@@ -102,9 +102,6 @@ class Reportpoint():
 class Backend():
 
     def __init__(self, config=None):
-        sys.path.append("%s/%s" % (os.getcwd(), 'python-dateutil'))
-        sys.path.append("%s/%s" % (os.getcwd(), 'requests'))
-        sys.path.append("%s/%s" % (os.getcwd(), 'rawes'))
         import rawes
         import requests
         from rawes.elastic_exception import ElasticException
